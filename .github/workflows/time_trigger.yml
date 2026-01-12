@@ -1,0 +1,12 @@
+name: Scheduled Workflow
+on:
+  schedule:
+    # Runs every day at 5:30 UTC
+    - cron: '30 5 * * *'
+
+jobs:
+  echo-time:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get current time
+        run: echo "The workflow ran at a scheduled time"
